@@ -7,19 +7,16 @@ import org.springframework.core.annotation.Order;
 public class OrderedSeat {
 
     private Seat seat;
-    public OrderedSeat() {
-
-    }
 
     public OrderedSeat(Seat seat){
         this.seat = seat;
     }
 
-    public void setTicket(Seat ticket){
-        this.seat = ticket;
+    public void setSeat(Seat seat){
+        this.seat = seat;
     }
 
-    public Seat getTicket(){
+    public Seat getSeat(){
         return seat;
     }
 }

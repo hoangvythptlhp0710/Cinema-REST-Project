@@ -32,7 +32,7 @@ public class CnmController {
     @PostMapping("/purchase")
     public ResponseEntity<?> purchaseSeat(@RequestBody Seat seat) {
         if (seat.getColumn() > cinema.getTotal_columns() || seat.getRow() > cinema.getTotal_rows() || seat.getRow() < 1 || seat.getColumn() < 1){
-            return new ResponseEntity<>(Map.of("error", "The number of a row or a column is out of bound!"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(Map.of("error", "The number of a row or a column is out of bounds!"), HttpStatus.BAD_REQUEST);
         }
         for (int i = 0; i < cinema.getAvailable_seats().size(); i++) {
             Seat s = cinema.getAvailable_seats().get(i);
@@ -40,7 +40,7 @@ public class CnmController {
                 OrderedSeat orderedSeat = new OrderedSeat(s);
                 cinema.getOrderedSeats().add(orderedSeat);
                 cinema.getAvailable_seats().remove(i);
-                return new ResponseEntity<>(orderedSeat, HttpStatus.OK);
+                return new ResponseEntity<>(s, HttpStatus.OK);
             }
         }
         return new ResponseEntity<>(Map.of("error", "The ticket has been already purchased!"), HttpStatus.BAD_REQUEST);

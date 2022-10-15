@@ -371,16 +371,8 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13376#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #3
-
-    The JSON object shouldn&#39;t have the key &quot;ticket&quot;
-
-    Full JSON:
-    {
-      &quot;ticket&quot;: null
-    }
-  time: Sat, 15 Oct 2022 03:03:48 UTC
+  message: Congratulations!
+  time: Sat, 15 Oct 2022 03:56:35 UTC
 record: -1
