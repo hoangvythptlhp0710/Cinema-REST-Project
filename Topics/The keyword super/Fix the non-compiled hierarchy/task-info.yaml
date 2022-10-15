@@ -38,18 +38,5 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/3041#comment
-status: Failed
-feedback:
-  message: |
-    Compilation error
-    Main.java:8: error: cannot find symbol
-            super.name = name;
-                 ^
-      symbol: variable name
-    Main.java:9: error: cannot find symbol
-            super.birthDate = birthDate;
-                 ^
-      symbol: variable birthDate
-    2 errors
-  time: Fri, 14 Oct 2022 15:12:04 UTC
+status: Solved
 record: -1

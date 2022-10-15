@@ -4,8 +4,8 @@ class Employee {
     protected String birthDate;
 
     public Employee(String name, String birthDate) {
-        super.name = name;
-        super.birthDate = birthDate;
+        this.name = name;
+        this.birthDate = birthDate;
     }
 }
 

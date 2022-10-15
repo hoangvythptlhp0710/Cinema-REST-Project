@@ -1,22 +1,33 @@
 package cinema.model;
 
-import cinema.model.Seat;
-import org.springframework.core.annotation.Order;
+import java.util.UUID;
 
 
 public class OrderedSeat {
 
-    private Seat seat;
+    private UUID token;
+    private Seat ticket;
 
-    public OrderedSeat(Seat seat){
-        this.seat = seat;
+
+    public UUID getToken() {
+        return token;
     }
 
-    public void setSeat(Seat seat){
-        this.seat = seat;
+    public void setToken(UUID token) {
+        this.token = token;
     }
 
-    public Seat getSeat(){
-        return seat;
+    public OrderedSeat(UUID token, Seat ticket){
+        this.ticket = ticket;
+        this.token = token;
     }
+
+    public void setTicket(Seat ticket){
+        this.ticket = ticket;
+    }
+
+    public Seat getTicket(){
+        return ticket;
+    }
+
 }
